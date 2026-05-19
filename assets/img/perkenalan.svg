@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&amp;display=swap');
+            .bg { fill: #FAFAFC; }
+            .grid { fill: rgba(15, 23, 42, 0.04); }
+            .accent-line { stroke: #C2410C; stroke-width: 8; stroke-linecap: round; }
+            .title { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 82px; fill: #0F172A; letter-spacing: -2px; }
+            .name { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 56px; fill: #1D4ED8; }
+            .sub { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 28px; fill: #475569; }
+            .code-text { font-family: monospace; font-size: 18px; fill: rgba(29, 78, 216, 0.08); }
+        </style>
+        
+        <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+            <circle cx="3" cy="3" r="2" class="grid"/>
+        </pattern>
+    </defs>
+
+    <rect width="1280" height="720" class="bg"/>
+    <rect width="1280" height="720" fill="url(#dots)"/>
+
+    <text x="50" y="100" class="code-text">import { useState, useEffect } from 'react';</text>
+    <text x="50" y="140" class="code-text">const Portfolio = () => {</text>
+    <text x="90" y="180" class="code-text">const [status, setStatus] = useState('Active');</text>
+    <text x="90" y="220" class="code-text">return &lt;div className="cyber-panel"&gt;</text>
+
+    <line x1="80" y1="280" x2="250" y2="280" class="accent-line" />
+
+    <text x="80" y="390" class="title">HI, I'M</text>
+    <text x="80" y="470" class="name">GUSTY FAQIKH</text>
+    <text x="80" y="530" class="sub">Informatics Engineering Student</text>
+    <text x="80" y="570" class="sub">Web Developer &amp; UI Designer</text>
+
+    <rect x="750" y="90" width="450" height="540" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-dasharray="10 10" rx="12"/>
+    <text x="975" y="370" font-family="'Inter', sans-serif" font-size="20" fill="#94A3B8" text-anchor="middle">[ Letakkan Foto Diri Tanpa Background Di Sini ]</text>
+</svg>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio | Gusty Faqikh</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="70" height="70">
+                <defs>
+                    <style>
+                    /* Definisi Palet Warna High-Contrast Light Mode */
+                    :root {
+                        --bg-color: #FAFAFC;
+                        --frame-color: #0F172A;     /* Slate 900 */
+                        --g-color: #1D4ED8;         /* Cobalt Blue */
+                        --accent-color: #C2410C;    /* Burnt Amber */
+                        --data-stream: #0284C7;     /* Active Sky Blue */
+                        --grid-color: rgba(15, 23, 42, 0.06);
+                    }
+
+                    .background { fill: var(--bg-color); }
+                    .frame { fill: none; stroke: var(--frame-color); stroke-width: 6; }
+                    .g-shape { fill: none; stroke: var(--g-color); stroke-width: 12; stroke-linecap: square; stroke-linejoin: miter; }
+                    
+                    /* Simpul Jaringan */
+                    .node { fill: var(--bg-color); stroke: var(--g-color); stroke-width: 4; }
+                    
+                    /* Command Line Prompt */
+                    .syntax { fill: none; stroke: var(--accent-color); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+                    .terminal-cursor { fill: var(--accent-color); animation: blink 1s step-end infinite; }
+
+                    /* Animasi Aliran Data Lintasan */
+                    .data-stream {
+                        fill: none;
+                        stroke: var(--data-stream);
+                        stroke-width: 4;
+                        stroke-linecap: round;
+                        stroke-dasharray: 15 150;
+                        animation: flow 2.5s linear infinite;
+                    }
+
+                    @keyframes blink { 
+                        0%, 100% { opacity: 1; } 
+                        50% { opacity: 0; } 
+                    }
+                    @keyframes flow {
+                        from { stroke-dashoffset: 400; }
+                        to { stroke-dashoffset: 0; }
+                    }
+                    </style>
+
+                    <pattern id="dot-grid-light" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="1.2" fill="var(--grid-color)"/>
+                    </pattern>
+                </defs>
+
+                <rect width="200" height="200" class="background"/>
+                <rect width="200" height="200" fill="url(#dot-grid-light)"/>
+
+                <rect x="10" y="10" width="180" height="180" class="frame"/>
+
+                <path d="M 140 60 L 60 60 L 60 140 L 140 140 L 140 100 L 90 100" class="g-shape"/>
+
+                <path d="M 140 60 L 60 60 L 60 140 L 140 140 L 140 100 L 90 100" class="data-stream"/>
+
+                <circle cx="140" cy="60" r="6" class="node"/>
+                <circle cx="60" cy="60" r="6" class="node"/>
+                <circle cx="60" cy="140" r="6" class="node"/>
+                <circle cx="140" cy="140" r="6" class="node"/>
+                <circle cx="140" cy="100" r="6" class="node"/>
+                <circle cx="90" cy="100" r="6" class="node"/>
+
+                <path d="M 100 94 L 108 100 L 100 106" class="syntax"/>
+                <rect x="112" y="104" width="12" height="4" class="terminal-cursor"/>
+            </svg>
+
+            <nav>
+                <ul>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#pendidikan">Pendidikan</a></li>
+                    <li><a href="#karya">Karya</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="profil" class="container glass-panel">
+            <article class="profile-content">
+                <img src="assets/img/foto diri.jpg" alt="Foto Profil Gusty Faqikh" class="profile-img">
+                <div>
+                    <h1>Gusty Faqikh</h1>
+                    <p>Mahasiswa Teknik Informatika dengan fokus pada pengembangan sistem efisien, desain antarmuka modern, dan arsitektur lintas platform. Saya merangkai logika menjadi kode yang fungsional dan estetis.</p>
+                </div>
+            </article>
+            
+            <div class="video-wrapper" style="margin-top: 30px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <video controls poster="assets/img/perkenalan-1.svg" style="width: 100%; display: block;">
+                    <source src="assets/video/perkenalan.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran tag video HTML5.
+                </video>
+            </div>
+        </section>
+
+        <section id="pendidikan" class="container">
+            <h2>Riwayat Akademik</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institusi</th>
+                        <th>Program Studi</th>
+                        <th>Semester</th>
+                        <th>IPK Terakhir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Politeknik Negeri Pontianak</td>
+                        <td>D3 Teknik Informatika</td>
+                        <td>4</td>
+                        <td>3.79</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="table-note">Fokus Studi: Pemrograman Web, Jaringan, dan Pengembangan GUI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+<section id="karya" class="container">
+            <h2>Jejak Kreatif</h2>
+            <div class="portfolio-grid">
+                
+                <article class="card clean-panel">
+                    <img src="assets/img/G-Jigsaw.png" alt="Tampilan antarmuka permainan web G-jigsaw">
+                    <h3>G-Jigsaw</h3>
+                    <p>Bukan sekadar teka-teki biasa, proyek ini adalah eksperimen nyata dalam mengendalikan koordinat spasial di peramban. Di sini saya menantang diri untuk membangun sistem <i>drag-and-drop</i> yang halus serta kalkulasi algoritma presisi agar setiap kepingan gambar bisa mengunci otomatis pada posisi yang tepat.</p>
+                    <a href="https://gusti111.github.io/G-jigsaw/" target="_blank" rel="noopener noreferrer" class="btn-link">Lihat Proyek →</a>
+                </article>
+
+                <article class="card clean-panel">
+                    <img src="assets/img/Monkey Neon Run.png" alt="Tangkapan layar game Monkey Neon Run">
+                    <h3>Monkey Neon Run</h3>
+                    <p>Eksperimen seru bertema retro-neon untuk menguji batas performa rendering JavaScript. Proyek game <i>endless runner</i> ini memaksa saya mengulik logika mekanik fisika dasar, sistem deteksi tabrakan boks yang akurat, serta optimasi siklus animasi agar visualnya tetap berjalan mulus tanpa lag di berbagai perangkat.</p>
+                    <a href="https://gusti111.github.io/monkey-neon-run/" target="_blank" rel="noopener noreferrer" class="btn-link">Lihat Proyek →</a>
+                </article>
+
+                <article class="card clean-panel">
+                    <img src="assets/img/Snake Game v2.0.png" alt="Gameplay dari perombakan Snake Game v2.0">
+                    <h3>Snake Game v2.0</h3>
+                    <p>Menghidupkan kembali game legendaris dengan pendekatan modern. Di proyek ini, saya merombak total struktur game klasik menggunakan HTML5 Canvas, mengoptimalkan pengelolaan array untuk pergerakan ular, serta menerapkan integrasi server Express minimalis agar aplikasi siap dideploy secara otomatis ke infrastruktur Vercel.</p>
+                    <a href="https://snake-game-v20.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-link">Lihat Proyek →</a>
+                </article>
+
+                <article class="card clean-panel">
+                    <img src="assets/img/Ruang Barasuara.png" alt="Tampilan antarmuka proyek digital Ruang Barasuara">
+                    <h3>Ruang Barasuara</h3>
+                    <p>Wadah eksplorasi di mana teknologi bertemu dengan seni visual. Proyek portal fans ini saya rancang sebagai bentuk studi kasus dalam menyusun sistem desain yang responsif, menyelaraskan elemen multimedia, serta menyajikan layout web estetik dan interaktif yang terinspirasi langsung dari identitas band Barasuara.</p>
+                    <a href="https://gusti111.github.io/Ruang-Barasuara/" target="_blank" rel="noopener noreferrer" class="btn-link">Lihat Proyek →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="kontak" class="container glass-panel">
+            <h2>Mari Berkolaborasi</h2>
+            <div class="contact-wrapper">
+                <form action="#" method="POST" class="contact-form">
+                    <fieldset>
+                        <legend>Kirim Pesan</legend>
+                        
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required>
+                        
+                        <label for="email">Alamat Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="subjek">Subjek Pesan:</label>
+                        <select id="subjek" name="subjek">
+                            <option value="proyek">Kolaborasi Proyek</option>
+                            <option value="diskusi">Diskusi Teknologi</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                        
+                        <label for="pesan">Pesan Anda:</label>
+                        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                        
+                        <button type="submit" href="#">Kirim Transmisi</button>
+                    </fieldset>
+                </form>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8165535174708!2d109.34447557528776!3d-0.05392099994554106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599622b58947%3A0x209695fee6b07761!2sPoliteknik%20Negeri%20Pontianak!5e0!3m2!1sid!2sid!4v1779174351040!5m2!1sid!2sid"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Peta Lokasi Pontianak">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Gusty Faqikh. Dirancang dengan presisi kode dan visi masa depan.</p>
+    </footer>
+
+</body>
+</html>

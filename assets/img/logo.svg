@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <style>
+      /* Definisi Palet Warna High-Contrast Light Mode */
+      :root {
+        --bg-color: #FAFAFC;
+        --frame-color: #0F172A;     /* Slate 900 - Tegas dan solid */
+        --g-color: #1D4ED8;         /* Cobalt Blue - Densitas tinggi */
+        --accent-color: #C2410C;    /* Burnt Amber - Kontras tajam */
+        --data-stream: #0284C7;     /* Active Sky Blue */
+        --grid-color: rgba(15, 23, 42, 0.06); /* Grid abu-abu transparan */
+      }
+
+      .background { fill: var(--bg-color); }
+      .frame { fill: none; stroke: var(--frame-color); stroke-width: 6; }
+      .g-shape { fill: none; stroke: var(--g-color); stroke-width: 12; stroke-linecap: square; stroke-linejoin: miter; }
+      
+      /* Simpul Jaringan */
+      .node { fill: var(--bg-color); stroke: var(--g-color); stroke-width: 4; }
+      
+      /* Command Line Prompt */
+      .syntax { fill: none; stroke: var(--accent-color); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .terminal-cursor { fill: var(--accent-color); animation: blink 1s step-end infinite; }
+
+      /* Animasi Aliran Data Lintasan */
+      .data-stream {
+        fill: none;
+        stroke: var(--data-stream);
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-dasharray: 15 150;
+        animation: flow 2.5s linear infinite;
+      }
+
+      @keyframes blink { 
+        0%, 100% { opacity: 1; } 
+        50% { opacity: 0; } 
+      }
+      @keyframes flow {
+        from { stroke-dashoffset: 400; }
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+
+    <pattern id="dot-grid-light" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="var(--grid-color)"/>
+    </pattern>
+  </defs>
+
+  <rect width="200" height="200" class="background"/>
+  <rect width="200" height="200" fill="url(#dot-grid-light)"/>
+
+  <rect x="10" y="10" width="180" height="180" class="frame"/>
+
+  <path d="M 140 60 L 60 60 L 60 140 L 140 140 L 140 100 L 90 100" class="g-shape"/>
+
+  <path d="M 140 60 L 60 60 L 60 140 L 140 140 L 140 100 L 90 100" class="data-stream"/>
+
+  <circle cx="140" cy="60" r="6" class="node"/>
+  <circle cx="60" cy="60" r="6" class="node"/>
+  <circle cx="60" cy="140" r="6" class="node"/>
+  <circle cx="140" cy="140" r="6" class="node"/>
+  <circle cx="140" cy="100" r="6" class="node"/>
+  <circle cx="90" cy="100" r="6" class="node"/>
+
+  <path d="M 100 94 L 108 100 L 100 106" class="syntax"/>
+  <rect x="112" y="104" width="12" height="4" class="terminal-cursor"/>
+</svg>
